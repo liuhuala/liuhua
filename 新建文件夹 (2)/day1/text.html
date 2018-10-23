@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* span{
+        width:200px;
+        height: 100px;
+        display: block;
+    } */
+    /* .ff{
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        background: -webkit-linear-gradient(left top,#23f5ff,pink,#e4963a); */
+        /* 从左上角到右下角渐变 */
+        /* box-shadow:2px 1px 48px 2px #000;
+        border-radius: 50%;
+        padding: 10px;
+        margin: 10px; */
+    /* } */
+/* "    .cc{
+        width: 500px;
+        height: 59px;
+        border: 5px solid #ccc;
+        border-radius: 50px;
+        background: chocolate;
+    }
+    #odiv{
+        background: #23f5ff;
+    }" */
+    /* css选择器的权重 id权重 100 类名(class) 10 标签选择器 1 */
+    /* .box{
+        width: 100px;
+        height: 100px;   
+        border: 10px solid #ccc;
+        background: #000;
+        padding: 20px;
+        box-sizing: border-box;
+    } */
+    /* 标准盒子模型 padding和border 都是把盒子往外撑 box-sizing:contant-box;
+        ie盒子模型 padding和border 都是把盒子往里撑  box-sizing:border-box;*/
+</style>
+<body>
+    <!-- <span>石家庄职业技术学院</span>
+    <span>前端培优班</span> -->
+    <!-- <div class="ff">石家庄职业技术学院</div>
+    <div class="cc" id="odiv">前端培优班</div> -->
+    <!-- <div class="box"></div> -->
+
+
+</body>
+</html>
+<script>
+    // function sum(a,b,c){
+       // console.log(arguments);//实际的参数集合
+        // console.log(a,b,c);
+        // var sum=0;
+        // for(var i=0;i<arguments.length;i++){
+        //     console.log(arguments[i])
+        //     sum+=arguments[i]
+            // console.log(sum)
+    //     }
+    //     return sum;
+
+    // }
+    // var p=sum(1,2,3,4,5);
+    // console.log(p)
+
+//   var x=y=z=[1,2,3,4];
+    //  数组属于引用数据类型 , 引用数据类型操作的永远是地址
+    // console.log(x==y);
+    // z[4]=5;
+    // console.log(z);
+    // console.log(x,y);
+
+    // z=[10,20,30];
+    // console.log(z);
+    // console.log(x,y,z);
+
+    //var str='.123';//NaN(not a number) null none
+    // 空字符串 或者 字符串只有空格 那么Number得到的结果都是0
+    //console.log(Number(str))
+    //console.log(parseInt(str))//只要第一个字符是非数字那么得到的结果就是NaN
+    // 1-'a' 结果NaN
+    // % 取余
+
+    //布尔数据类型中 有5个是false 其余全是true
+    //boolean()把其他数据类型转换成其他类型
+    //0 NaN '' null underfined
+    // ! 取反
+    //或 || 前面成立后面不用看,如果前面不成立直接把后面的值给它;&& 前面和后面都成立看后面
+    var a=0 || 2;
+    var b=0 && 2;
+    console.log(a,b)
+
+    // == 相对比较 会把两边数据类型转换成同一种类型再去比较
+    // === 绝对比较 先看两边是不是同一类型，若不是直接false;若是则再去查看比较值是否相等
+    console.log('0' == 0)//两边转换成数字再去比较
+    //先把引用数据类型转换成字符串，再把字符串转换成数字，然后再去比较
+    console.log([]==false)//true
+    //原型 toString
+    console.log(![]==false)//true
+
+    console.log('0' === 0)
+
+    /*
+        js中的数据类型分两大类
+        基本数据类型(值类型) string number boolean null underfined
+        引用数据类型 [] {}(普通对象) function Data Math 正则
+        基本数据类型操作的都是一个值，引用数据类型操作都是一个地址
+    */
+
+    //字符串拼接
+    var name='草莓';age=0;
+    console.log('我的名字是'+name+',年龄是'+age)
+    //es6 的字符串模板
+    var str=`我的名字是${name}
+    我的年龄是${age}`;
+    console.log(str)
+
+    var x='123\'sdf'
+    //若想单引号包含单引号，我们需要用 \ 把字符串中的单引号转义
+    console.log(x)
+
+   NaN == NaN //false NaN和NaN永远不相等
+ 
+   
+   isNaN(1/'a')//判断参数是否是NaN 若是返回true 若否返回false
+
+   null == undefined;//true
+   null === undefined;//false
+
+   //typeof 查看数据类型
+   //typeof typeof 1 返回的是字符
+   typeof 1;
+
+   //对象中获取属性值的两种方式 一种是 打点 
+   //另一种是 [] 中括号这种方式一般运用于 属性值是通过变量获取的情况
+
+
+   //switch……case 是绝对比较
+   for(var i=0;i<10;i++){
+       switch(i % 4){
+           case 1:
+           case 3:
+            i+=1;
+            break;
+           case 0:
+           case 2:
+            i+=2;
+            break;
+           default:i+=4;
+
+       }
+   }
+   console.log(i);
+   
+
+   
+</script>
